@@ -1,0 +1,23 @@
+var a = 20, b = 30;
+document.write("<br><br><b><center><h1>ARITHMETIC OPERSTIONS</h1></center></b>");
+document.write(`<b><center> <h2>var a =${a} ,var b =${b} </h2></center></b>`);
+document.write("<b><br>ADDITION<br></b><br>");
+document.write(`${a} + ${b} =${a + b}<br><br>`)
+document.write("<b><br>SUBSTRACTION<br></b><br>");
+document.write(`${a} - ${b} =${a - b}<br><br>`);
+document.write("<b><br>MULTIPLICATION<br></b><br>");
+document.write(`${a} * ${b} =${a * b}<br><br>`);
+document.write("<b><br>EXPONENTIATION<br></b><br>");
+document.write(`${a} ** ${b} =${a ** b}<br><br>`);
+document.write("<b><br>DIVISION<br></b><br>");
+document.write(`${a} / ${b} =${a / b}<br><br>`);
+document.write("<b><br>MODULUS(REMAINDER)<br></b><br>");
+document.write(`${a} % ${b} =${a % b}<br><br>`);
+document.write("<b><br>POST INCREMENT<br></b><br>");
+document.write(`${a}++ =${a++}<br><br>`);
+document.write("<b><br>POST DECREMENT<br></b><br>");
+document.write(`${a}-- =${a--}<br><br>`);
+document.write("<b><br>PRE INCREMENT<br></b><br>");
+document.write(`++${a} =${++a}<br><br>`);
+document.write("<b><br>PRE DECREMENT<br></b><br>");
+document.write(`--${a} =${--a}<br><br>`);

@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en" id="main">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="47.JS-DOM-Traversal-Method-In_JS.js"></script>
+    <style>
+      * {
+        margin: 0%;
+        padding: 0%;
+        box-sizing: border-box;
+      }
+      a {
+        text-decoration: none;
+        color: black;
+        font-size: 20px;
+      }
+
+      body {
+        display: flex;
+        flex-direction: column;
+      }
+
+      h3 {
+        margin: 20px 0px 0px 0px;
+        text-transform: capitalize;
+        font-size: 26px;
+      }
+      p {
+        color: gray;
+        font-size: 20px;
+        font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+      }
+
+      h1 {
+        text-align: center;
+        color: gray;
+      }
+      h2 {
+        text-align: center;
+        color: rgb(0, 58, 112);
+        width: 70%;
+        margin: 20px auto;
+      }
+      .box {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 80%;
+        margin: 20px auto;
+        border: 2px solid gray;
+        padding: 20px;
+      }
+      button {
+        flex-basis: 330px;
+        flex-grow: 1;
+        margin: 10px;
+        height: 40px;
+        font-size: 20px;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        color: #fff;
+        background-color: rgb(255, 0, 0);
+        border: 2px solid #fff;
+        cursor: pointer;
+        border-radius: 6px;
+      }
+      button:hover {
+        background-color: rgb(128, 26, 0);
+      }
+      button:nth-child(3n) {
+        background-color: rgb(213, 0, 57);
+      }
+      button:nth-child(3n):hover {
+        background-color: rgb(136, 0, 36);
+      }
+      button:nth-child(5n) {
+        background-color: rgb(213, 0, 199);
+      }
+      button:nth-child(5n):hover {
+        background-color: rgb(179, 0, 182);
+      }
+      button:nth-child(7n) {
+        background-color: rgb(0, 82, 213);
+      }
+      button:nth-child(7n):hover {
+        background-color: rgb(0, 15, 182);
+      }
+      button:nth-child(9n) {
+        background-color: rgb(0, 213, 192);
+      }
+      button:nth-child(9n):hover {
+        background-color: rgb(1, 98, 163);
+      }
+      button:nth-child(13n) {
+        background-color: rgb(0, 213, 138);
+      }
+      button:nth-child(13n):hover {
+        background-color: rgb(2, 110, 63);
+      }
+      button:nth-child(2) {
+        background-color: rgb(2, 0, 47);
+      }
+      button:nth-child(2):hover {
+        background-color: rgb(2, 1, 35);
+      }
+      button:nth-child(4) {
+        background-color: rgb(0, 89, 213);
+      }
+      button:nth-child(4):hover {
+        background-color: rgb(0, 25, 101);
+      }
+      button:nth-child(8n) {
+        background-color: rgb(25, 213, 0);
+      }
+      button:nth-child(8n):hover {
+        background-color: rgb(1, 80, 12);
+      }
+      span {
+        color: red;
+      }
+      .dhanush {
+        background-color: crimson;
+      }
+      .Dhanush {
+        background-color: crimson;
+      }
+      .container {
+        width: 95%;
+        margin: 20px auto;
+        border: 2px solid black;
+        display: flex;
+        padding: 20px;
+        flex-wrap: wrap;
+        height: max-content;
+        justify-content: space-around;
+        align-content: space-around;
+      }
+      .con {
+        width: 90%;
+        margin: 20px auto;
+        border: 2px solid black;
+        display: flex;
+        padding: 20px;
+        flex-wrap: wrap;
+        height: max-content;
+        justify-content: space-around;
+        align-content: space-around;
+      }
+      .sub {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-grow: 1;
+        flex-basis: 100px;
+        height: 150px;
+        border: 2px solid black;
+        margin: 10px;
+        font-size: 20px;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+          sans-serif;
+      }
+      .pp {
+        width: 100%;
+      }
+    </style>
+    <title>47.JS-DOM-Traversal-Method-In_JS</title>
+  </head>
+  <body id="dd">
+    <div class="con" id="outter">
+      <h1 class="pp" id="child-1">Parent 1</h1>
+      <div class="container" id="inner">
+        <h1 class="pp" id="child0">Parent 2 ====> child for parent 1</h1>
+        <div class="sub" id="child1"><p id="p1">Child 1</p></div>
+        <div class="sub" id="child2"><p id="p2">Child 2</p></div>
+        <div class="sub" id="child3"><p id="p3">Child 3</p></div>
+        <div class="sub" id="child4"><p id="p4">Child 4</p></div>
+        <div class="sub" id="child5"><p id="p5">Child 5</p></div>
+        <div class="sub" id="child6"><p id="p6">Child 6</p></div>
+        <div class="sub" id="child7"><p id="p7">Child 7</p></div>
+        <div class="sub" id="child8"><p id="p8">Child 8</p></div>
+        <div class="sub" id="child9"><p id="p9">Child 9</p></div>
+        <div class="sub" id="child10"><p id="p10">Child 10</p></div>
+      </div>
+    </div>
+    <h1>JavaScript DOM-Travesal-Methods-in-JS</h1>
+    <div class="box" id="bb">
+      <button onclick="parentnode()">ParentNode</button>
+      <button onclick="parentelement()">parentElement</button>
+      <button onclick="Children()">Children</button>
+      <button onclick="Childnodes()">childNodes</button>
+      <button onclick="firstchild()">firstChild</button>
+      <button onclick="firstElementchild()">firstElementChild</button>
+      <button onclick="lastchild()">lastChild</button>
+      <button onclick="lastElementchild()">lastElementChild</button>
+      <button onclick="nextelementSibling()">nextElementSibling</button>
+      <button onclick="nextsibling()">nextSibling</button>
+      <button onclick="previousElementsibling()">previousElementSibling</button>
+      <button onclick="previoussibling()">previousSibling</button>
+    </div>
+
+    <div id="result"></div>
+    <div id="result1"></div>
+    <article></article>
+
+    <div class="navigatebtn">
+      <a href="46.JS-classList-In-JS.html" class="previousbtn">Previous </a>
+      <a href="48.JS-DOM-Create-Methods-In-JS.html" class="nextbtn">Next </a>
+    </div>
+    <style>
+      .nextbtn {
+        width: 120px;
+        height: 40px;
+        color: #fff;
+        text-transform: uppercase;
+        background-color: crimson;
+        text-align: center;
+        padding-top: 10px;
+        font-weight: 800px;
+        font-size: 18px;
+
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+      }
+      .nextbtn::after {
+        content: "\25BA";
+      }
+      .previousbtn {
+        width: 120px;
+        height: 40px;
+        color: #fff;
+        text-transform: uppercase;
+        background-color: crimson;
+        text-align: center;
+        padding-top: 10px;
+        font-weight: 800px;
+        font-size: 18px;
+
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+      }
+      .previousbtn::before {
+        content: "\25C0";
+        margin-right: 8px;
+      }
+      .navigatebtn {
+        display: flex;
+        width: 98%;
+
+        margin: 40px auto 10px auto;
+        height: fit-content;
+        box-sizing: border-box;
+        padding: 10px;
+        justify-content: space-between;
+      }
+    </style>
+  </body>
+</html>

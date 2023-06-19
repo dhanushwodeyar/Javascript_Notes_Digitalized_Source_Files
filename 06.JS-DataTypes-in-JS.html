@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>06-DataTypes-in-JS</title>
+    <script>
+        let First_name="Dhanush",
+        Last_name="Wodeyar",
+        Age=23,
+        Height=5.4,
+        Weight=63.40,
+        Married=null,
+        Life=undefined,
+        Are_You_Male=true;
+         document.write("<b>This is a demonstartion variable using <i>LET</i> keyword</b><br><br>");
+        document.write("<b><br>THIS BELLOW STATMENT IS WRITTEN INSIDE THE HTML USING script TAG .<br><br></b>");
+        document.write(`First_Name = ${First_name} ================>>>  type = ${typeof(First_name)}  <br> Last_name = ${Last_name} ================>>>  type = ${typeof(Last_name)}  <br> Age = ${Age} ================>>>  type = ${typeof(Age)}  <br> Height = ${Height}  ================>>>  type = ${typeof(Height)} <br> Weight =${Weight}  ================>>>  type = ${typeof(Weight)} <br> Married = ${Married} ================>>>  type = ${typeof(Married)} <br> Life = ${Life} ================>>>  type = ${typeof(Life)}  <br> Are_You_Male = ${Are_You_Male} ================>>>  type = ${typeof(Are_You_Male)}  <br><br>`);
+    </script>
+</head>
+<body>
+<script src="06.JS-DataTypes-in-JS.js"></script>    
+    <section class="navigatebtn">
+      <a href="05.JS-Variable-Using-Let.html" class="previousbtn">Previous </a>
+      <a href="07.JS-Arithmetic-Operation-in-JS.html" class="nextbtn">Next </a>
+    </section>
+    <style>
+      .nextbtn {
+        width: 120px;
+        height: 40px;
+        color: #fff;
+        text-transform: uppercase;
+        background-color: crimson;
+        text-align: center;
+        padding-top: 10px;
+        font-weight: 800px;
+        font-size: 18px;
+        text-decoration: none;
+
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+      }
+      .nextbtn::after {
+        content: "\25BA";
+      }
+      .previousbtn {
+        width: 120px;
+        height: 40px;
+        color: #fff;
+        text-transform: uppercase;
+        background-color: crimson;
+        text-align: center;
+        padding-top: 10px;
+        font-weight: 800px;
+        font-size: 18px;
+        text-decoration: none;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+      }
+      .previousbtn:hover {
+        background-color: rgb(184, 0, 37);
+      }
+      .nextbtn:hover {
+        background-color: rgb(184, 0, 37);
+      }
+      .previousbtn::before {
+        content: "\25C0";
+        margin-right: 8px;
+      }
+      .navigatebtn {
+        display: flex;
+        width: 98%;
+
+        margin: 40px auto 10px auto;
+        height: fit-content;
+        box-sizing: border-box;
+        padding: 10px;
+        justify-content: space-between;
+      }
+    </style>
+</body>
+</html>

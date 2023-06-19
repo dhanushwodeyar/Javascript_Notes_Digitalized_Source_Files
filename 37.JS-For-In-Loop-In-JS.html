@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>37.JS-For-In-Loop-In-JS</title>
+    
+    <style>
+      .main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: max-content;
+        height: max-content;
+        margin: 0px auto;
+        border: 2px solid red !important;
+        line-height: 40px;
+        padding: 30px;
+      }
+      .squer {
+        color: brown !important;
+        font-size: 30px;
+      }
+      .main > p {
+        font-size: 25px;
+      }
+      .flower {
+        color: rgb(0, 44, 243) !important;
+        font-size: 30px;
+      }
+      .equal {
+        color: rgb(243, 0, 0) !important;
+        font-size: 30px;
+      }
+      .colan {
+        color: rgb(227, 0, 0);
+        font-weight: bold;
+      }
+      .camma {
+        font-weight: bold;
+        font-size: 26px;
+        color: green;
+      }
+      .name {
+        font-weight: 800;
+        font-size: 26px;
+        color: blueviolet;
+      }
+      .fun {
+        color: rgb(255, 21, 154);
+      }
+      .round {
+        color: rgb(255, 47, 0);
+      }
+      button {
+        width: max-content;
+        height: 40px;
+        font-size: 20px;
+        color: aliceblue;
+        background-color: rgb(56, 86, 12);
+        flex-grow: 1;
+        flex-basis: min(150px,max-content);
+        margin: 10px;
+        cursor: pointer;
+      }
+      h1 {
+        text-align: center;
+      }
+      .btn {
+        display: flex;
+        border: 2px solid red;
+        width: 80%;
+        margin: 20px auto;
+        padding: 10px;
+        flex-wrap: wrap;
+      }
+    </style>
+  </head>
+  <body>
+    <script src="37.JS-For-In-Loop-In-JS.js"></script>
+        <h1>Please Open the Console tab By Inspecting the Browser Window</h1>
+    <div class="btn">
+      <button onclick="Arrayofobject()">For-In-Loop</button>
+      
+    </div>
+    <div id="result">
+
+    </div>
+        <section class="navigatebtn">
+      <a href="36.JS-Array-Of-Objects-In-JS.html" class="previousbtn">Previous </a>
+      <a href="38.JS-Numbers-Method-In-JS.html" class="nextbtn">Next </a>
+    </section>
+    <style>
+      .nextbtn {
+        width: 120px;
+        height: 40px;
+        color: #fff;
+        text-transform: uppercase;
+        background-color: crimson;
+        text-align: center;
+        padding-top: 10px;
+        font-weight: 800px;
+        font-size: 18px;
+        text-decoration: none;
+
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+      }
+      .nextbtn::after {
+        content: "\25BA";
+      }
+      .previousbtn {
+        width: 120px;
+        height: 40px;
+        color: #fff;
+        text-transform: uppercase;
+        background-color: crimson;
+        text-align: center;
+        padding-top: 10px;
+        font-weight: 800px;
+        font-size: 18px;
+        text-decoration: none;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+      }
+      .previousbtn:hover {
+        background-color: rgb(184, 0, 37);
+      }
+      .nextbtn:hover {
+        background-color: rgb(184, 0, 37);
+      }
+      .previousbtn::before {
+        content: "\25C0";
+        margin-right: 8px;
+      }
+      .navigatebtn {
+        display: flex;
+        width: 98%;
+
+        margin: 40px auto 10px auto;
+        height: fit-content;
+        box-sizing: border-box;
+        padding: 10px;
+        justify-content: space-between;
+      }
+    </style>
+  </body>
+</html>

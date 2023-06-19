@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Input form</title>
+    <style>
+      body{
+        height: 500px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+        .box{
+            display: flex;
+            /* flex-wrap: wrap; */
+            width:30%;
+            height:max-content;
+            margin: 20px auto;
+            border:2px solid red;
+            padding:20px;
+        }
+        form{
+          display: flex;
+          flex-wrap: wrap;
+        }
+        label{
+          
+           flex-grow: 1;
+        font-size: 20px;
+        flex-basis: 48%;
+        margin:2px;
+        
+        }
+        input{
+           flex-grow: 1;
+                 flex-basis: 48%;
+                 height: 30px;
+        margin:2px;
+        }
+        input[type="submit"]
+        {
+          flex-basis: 200px;
+          height: 35px;
+          
+        }
+
+
+
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <form action="" method="get">
+        <label for="fname">First name :</label>
+        <input type="text" name="fname" />
+        <label for="lname">Last name :</label>
+        <input type="text" name="lname" />
+        <label for="email">email :</label>
+        <input type="text" name="email" />
+        <label for="pnum">Phone Number :</label>
+        <input type="text" name="pnum" />
+        <label for="city">City:</label>
+        <input type="text" name="city" />
+        <input type="submit" value="submit" />
+      </form>
+    </div>
+  </body>
+</html>

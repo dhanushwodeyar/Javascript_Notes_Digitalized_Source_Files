@@ -1,0 +1,13 @@
+var data = "This is a simple string content for console.log()";
+var arr = ["Dhanush", 10, "Wodeyar", "Babu", 3.8, 2.3, "sumathi", "Darshan", "Shashank","console.table()"];
+let error = "Somthing went wrong error message using console.error()";
+let warnning = "Dont repeat the mistake warrning message using console.warn()";
+const timestart = "test";
+console.time(timestart);
+console.log(data);
+console.log(arr);
+console.table(arr);
+console.error(error);
+console.warn(warnning);
+console.timeEnd(timestart);
+// console.clear();

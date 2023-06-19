@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>32.JS-Array-Methods-In-JS</title>
+    <style>
+      .box {
+        width: 75%;
+        display: flex;
+        margin: 30px auto;
+        height: min-content;
+        padding: 10px;
+        flex-wrap: wrap;
+        outline: 2px solid rgb(0, 3, 203);
+        box-shadow: 2px 2px 10px 6px rgb(152, 152, 152);
+        background-color: rgb(216, 216, 216);
+      }
+      #btn {
+        flex-grow: 1;
+        flex-basis: 150px;
+        height: 40px;
+        margin: 10px;
+        font-size: 16px;
+        color: #fff;
+        border: none;
+        box-shadow: 2px 2px 2px 1px rgb(185, 185, 185);
+      }
+      #btn:nth-child(8n) {
+        background-color: rgb(255, 46, 126);
+      }
+      #btn:nth-child(8n):hover {
+        background-color: rgb(231, 0, 88);
+        cursor: pointer;
+      }
+      #btn:nth-child(7n) {
+        background-color: rgb(0, 237, 134);
+      }
+      #btn:nth-child(7n):hover {
+        background-color: rgb(0, 171, 86);
+        cursor: pointer;
+      }
+      #btn:nth-child(6n) {
+        background-color: rgb(46, 133, 255);
+      }
+      #btn:nth-child(6n):hover {
+        background-color: rgb(0, 46, 231);
+        cursor: pointer;
+      }
+      #btn:nth-child(9n) {
+        background-color: rgb(255, 104, 104);
+      }
+      #btn:nth-child(9n):hover {
+        background-color: rgb(255, 68, 68);
+        cursor: pointer;
+      }
+      #btn:nth-child(10n) {
+        background-color: rgb(163, 0, 0);
+      }
+      #btn:nth-child(10n):hover {
+        background-color: rgb(135, 1, 1);
+        cursor: pointer;
+      }
+      #btn:nth-child(13n) {
+        background-color: rgb(158, 4, 130);
+      }
+      #btn:nth-child(13n):hover {
+        background-color: rgb(113, 0, 103);
+        cursor: pointer;
+      }
+      #btn:nth-child(1) {
+        background-color: rgb(0, 163, 163);
+      }
+      #btn:nth-child(1):hover {
+        background-color: rgb(1, 99, 135);
+        cursor: pointer;
+      }
+      #btn:nth-child(17n) {
+        background-color: rgb(0, 163, 111);
+      }
+      #btn:nth-child(17n):hover {
+        background-color: rgb(2, 120, 90);
+        cursor: pointer;
+      }
+      #btn:nth-child(2) {
+        background-color: rgb(255, 98, 0);
+      }
+      #btn:nth-child(2):hover {
+        background-color: rgb(216, 76, 0);
+        cursor: pointer;
+      }
+      #btn:nth-child(3) {
+        background-color: rgb(65, 0, 163);
+      }
+      #btn:nth-child(3):hover {
+        background-color: rgb(32, 2, 120);
+        cursor: pointer;
+      }
+      #btn:nth-child(4) {
+        background-color: rgb(0, 163, 49);
+      }
+      #btn:nth-child(4):hover {
+        background-color: rgb(2, 104, 55);
+        cursor: pointer;
+      }
+      #btn:nth-child(5) {
+        background-color: rgb(180, 186, 0);
+      }
+      #btn:nth-child(5):hover {
+        background-color: rgb(141, 122, 0);
+        cursor: pointer;
+      }
+      #btn:nth-child(11) {
+        background-color: rgb(97, 2, 192);
+      }
+      #btn:nth-child(11):hover {
+        background-color: rgb(74, 0, 148);
+        cursor: pointer;
+      }
+      #btn:nth-child(15) {
+        background-color: rgb(163, 0, 100);
+      }
+      #btn:nth-child(15):hover {
+        background-color: rgb(120, 2, 91);
+        cursor: pointer;
+      }
+      #btn:nth-child(19n) {
+        background-color: rgb(8, 0, 163);
+      }
+      #btn:nth-child(19n):hover {
+        background-color: rgb(2, 4, 93);
+        cursor: pointer;
+      }
+      #btn:nth-child(22n) {
+        background-color: rgb(33, 163, 0);
+      }
+      #btn:nth-child(22n):hover {
+        background-color: #207802;
+        cursor: pointer;
+      }
+      #btn:nth-child(23n) {
+        background-color: rgb(0, 90, 61);
+      }
+      #btn:nth-child(23n):hover {
+        background-color: rgba(3, 29, 23, 0.992);
+        cursor: pointer;
+      }
+      #btn:nth-child(25) {
+        background-color: rgb(1, 23, 123);
+      }
+      #btn:nth-child(25):hover {
+        background-color: rgba(6, 0, 67, 0.992);
+        cursor: pointer;
+      } 
+    </style>
+  </head>
+  <body>
+    <script src="32.JS-Array-Methods-In-JS.js"></script>
+    <div class="box">
+      <button id="btn" onclick="insertarray()">Insert at End</button>
+      <button id="btn" onclick="deleting()">Delete at End</button>
+      <button id="btn" onclick="Unshifting()">Insert at Beginning</button>
+      <button id="btn" onclick="Shifting()">Delete at Beginning</button>
+      <button id="btn" onclick="Disp()">Display</button>
+      <button id="btn" onclick="reversing()">Reverse</button>
+      <button id="btn" onclick="sorting()">Sort</button>
+      <button id="btn" onclick="Concatinating()">Concat</button>
+      <button id="btn" onclick="joinning()">Join</button>
+      <button id="btn" onclick="Slicing()">Slice</button>
+      <button id="btn" onclick="Splicing()">Splice</button>
+      <button id="btn" onclick="checkarray()">Check an Array</button>
+      <button id="btn" onclick="forwordindex()">IndexOf</button>
+      <button id="btn" onclick="backwordindex()">LastIndexOf</button>
+      <button id="btn" onclick="isexist()">Element Includes</button>
+      <button id="btn" onclick="Somecondition()">Some</button>
+      <button id="btn" onclick="Everycondition()">Every</button>
+      <button id="btn" onclick="findadult()">Find</button>
+      <button id="btn" onclick="findindexadult()">FindIndex</button>
+      <button id="btn" onclick="filteradult()">Filter</button>
+      <button id="btn" onclick="tostring()">Convert to String</button>
+      <button id="btn" onclick="valueof()">ValueOf</button>
+      <button id="btn" onclick="filling()">Fill</button>
+      <button id="btn" onclick="foreach()">ForEach</button>
+      <button id="btn" onclick="mapping()">Map</button>
+      <button id="btn" onclick="reducing()">Reduce</button>
+    </div>
+    <div id="result"></div>
+    <div id="result1"></div>
+    <div id="result2"></div>
+        <section class="navigatebtn">
+      <a href="31.JS-Multi-Dimensional-Array-In-JS.html" class="previousbtn">Previous </a>
+      <a href="33.JS-Sorting-An-Array-Using-User-Defind-Function.html" class="nextbtn">Next </a>
+    </section>
+    <style>
+      .nextbtn {
+        width: 120px;
+        height: 40px;
+        color: #fff;
+        text-transform: uppercase;
+        background-color: crimson;
+        text-align: center;
+        padding-top: 10px;
+        font-weight: 800px;
+        font-size: 18px;
+        text-decoration: none;
+
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+      }
+      .nextbtn::after {
+        content: "\25BA";
+      }
+      .previousbtn {
+        width: 120px;
+        height: 40px;
+        color: #fff;
+        text-transform: uppercase;
+        background-color: crimson;
+        text-align: center;
+        padding-top: 10px;
+        font-weight: 800px;
+        font-size: 18px;
+        text-decoration: none;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+      }
+      .previousbtn:hover {
+        background-color: rgb(184, 0, 37);
+      }
+      .nextbtn:hover {
+        background-color: rgb(184, 0, 37);
+      }
+      .previousbtn::before {
+        content: "\25C0";
+        margin-right: 8px;
+      }
+      .navigatebtn {
+        display: flex;
+        width: 98%;
+
+        margin: 40px auto 10px auto;
+        height: fit-content;
+        box-sizing: border-box;
+        padding: 10px;
+        justify-content: space-between;
+      }
+    </style>
+  </body>
+</html>

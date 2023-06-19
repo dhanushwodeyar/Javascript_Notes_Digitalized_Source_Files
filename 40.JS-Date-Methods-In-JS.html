@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>40.JS-Date-Methods-In-JS</title>
+    <style>
+      h1 {
+        text-align: center;
+        color: gray;
+      }
+      .box {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 80%;
+        margin: 20px auto;
+        border: 2px solid gray;
+        padding: 20px;
+      }
+      button {
+        flex-basis: 200px;
+        flex-grow: 1;
+        margin: 10px;
+        height: 40px;
+        font-size: 20px;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        color: #fff;
+        background-color: rgb(255, 0, 0);
+        border: 2px solid #fff;
+        cursor: pointer;
+        border-radius: 6px;
+      }
+      button:hover {
+        background-color: rgb(128, 26, 0);
+      }
+      button:nth-child(3n) {
+        background-color: rgb(213, 0, 57);
+      }
+      button:nth-child(3n):hover {
+        background-color: rgb(136, 0, 36);
+      }
+      button:nth-child(5n) {
+        background-color: rgb(213, 0, 199);
+      }
+      button:nth-child(5n):hover {
+        background-color: rgb(179, 0, 182);
+      }
+      button:nth-child(7n) {
+        background-color: rgb(0, 82, 213);
+      }
+      button:nth-child(7n):hover {
+        background-color: rgb(0, 15, 182);
+      }
+      button:nth-child(9n) {
+        background-color: rgb(0, 213, 192);
+      }
+      button:nth-child(9n):hover {
+        background-color: rgb(1, 98, 163);
+      }
+      button:nth-child(13n) {
+        background-color: rgb(0, 213, 138);
+      }
+      button:nth-child(13n):hover {
+        background-color: rgb(2, 110, 63);
+      }
+      button:nth-child(2) {
+        background-color: rgb(2, 0, 47);
+      }
+      button:nth-child(2):hover {
+        background-color: rgb(2, 1, 35);
+      }
+      button:nth-child(4) {
+        background-color: rgb(0, 89, 213);
+      }
+      button:nth-child(4):hover {
+        background-color: rgb(0, 25, 101);
+      }
+      button:nth-child(8n) {
+        background-color: rgb(25, 213, 0);
+      }
+      button:nth-child(8n):hover {
+        background-color: rgb(1, 80, 12);
+      }
+      span {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <script src="40.JS-Date-Methods-In-JS.js"></script>
+
+    <div class="box">
+      <button onclick="CurrentDateAndTime()">Current Date And Time</button>
+      <button onclick="ToLocaleString()">toLocaleString()</button>
+      <button onclick="ToString()">toString()</button>
+      <button onclick="ToDateString()">toDateString()</button>
+      <button onclick="GetDate()">getDate()</button>
+      <button onclick="GetFullYear()">getFullYear()</button>
+      <button onclick="GetMonth()">getMonth()</button>
+      <button onclick="GetDay()">getDay()</button>
+      <button onclick="GetHours()">getHours()</button>
+      <button onclick="GetMinutes()">getMinutes()</button>
+      <button onclick="GetSeconds()">getSeconds()</button>
+      <button onclick="GetMilliseconds()">getMilliseconds()</button>
+      <button onclick="SetDate()">setDate()</button>
+      <button onclick="SetFullYear()">setFullYear()</button>
+      <button onclick="SetHours()">setHours</button>
+      <button onclick="SetMilliseconds()">setMilliseconds()</button>
+      <button onclick="SetMinutes()">setMinutes()</button>
+      <button onclick="SetMonth()">setMonth()</button>
+      <button onclick="SetSeconds()">setSeconds</button>
+      <button onclick="Clearing()">Clear Value</button>
+    </div>
+    <div id="result"></div>
+    <div id="result1"></div>
+    <div id="result2"></div>
+        <section class="navigatebtn">
+      <a href="39.JS-Math-Methods-In-JS.html" class="previousbtn">Previous </a>
+      <a href="41.JS-DOM-In-JS.html" class="nextbtn">Next </a>
+    </section>
+    <style>
+      .nextbtn {
+        width: 120px;
+        height: 40px;
+        color: #fff;
+        text-transform: uppercase;
+        background-color: crimson;
+        text-align: center;
+        padding-top: 10px;
+        font-weight: 800px;
+        font-size: 18px;
+        text-decoration: none;
+
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+      }
+      .nextbtn::after {
+        content: "\25BA";
+      }
+      .previousbtn {
+        width: 120px;
+        height: 40px;
+        color: #fff;
+        text-transform: uppercase;
+        background-color: crimson;
+        text-align: center;
+        padding-top: 10px;
+        font-weight: 800px;
+        font-size: 18px;
+        text-decoration: none;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+      }
+      .previousbtn:hover {
+        background-color: rgb(184, 0, 37);
+      }
+      .nextbtn:hover {
+        background-color: rgb(184, 0, 37);
+      }
+      .previousbtn::before {
+        content: "\25C0";
+        margin-right: 8px;
+      }
+      .navigatebtn {
+        display: flex;
+        width: 98%;
+
+        margin: 40px auto 10px auto;
+        height: fit-content;
+        box-sizing: border-box;
+        padding: 10px;
+        justify-content: space-between;
+      }
+    </style>
+  </body>
+</html>

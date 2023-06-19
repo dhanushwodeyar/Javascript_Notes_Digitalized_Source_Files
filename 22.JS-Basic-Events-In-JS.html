@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>22.JS-Basic-Events-In-JS</title>
+    <style>
+      .mouseevents {
+        display: flex;
+        flex-wrap: wrap;
+        width: 80%;
+        height: max-content;
+        border: 2px solid blueviolet;
+        margin: 0px auto;
+      }
+      .mouseevents h1 {
+        margin: 0px;
+        text-align: center;
+        width: 100%;
+      }
+      .mouseevents button {
+        height: 40px;
+        flex-grow: 1;
+        margin: 10px;
+      }
+      button:nth-child(2) {
+        background-color: blueviolet;
+        color: #fff;
+        cursor: pointer;
+        border: none;
+      }
+      button:nth-child(2):hover {
+        background-color: rgb(103, 0, 199);
+      }
+
+      button:nth-child(3) {
+        background-color: rgb(47, 102, 229);
+        color: #fff;
+        cursor: pointer;
+        border: none;
+      }
+      button:nth-child(3):hover {
+        background-color: rgb(14, 44, 210);
+      }
+
+      button:nth-child(4) {
+        background-color: rgb(226, 48, 163);
+        color: #fff;
+        cursor: pointer;
+        border: none;
+      }
+      button:nth-child(4):hover {
+        background-color: rgb(209, 0, 160);
+      }
+
+      button:nth-child(5) {
+        background-color: rgb(234, 54, 54);
+        color: #fff;
+        cursor: pointer;
+        border: none;
+      }
+      button:nth-child(5):hover {
+        background-color: rgb(255, 0, 0);
+      }
+
+      button:nth-child(6) {
+        background-color: rgb(248, 122, 49);
+        color: #fff;
+        cursor: pointer;
+        border: none;
+      }
+      button:nth-child(6):hover {
+        background-color: rgb(255, 115, 0);
+      }
+
+      button:nth-child(7) {
+        background-color: rgb(42, 177, 239);
+        color: #fff;
+        cursor: pointer;
+        border: none;
+      }
+      button:nth-child(7):hover {
+        background-color: rgb(7, 153, 182);
+      }
+      button:nth-child(8) {
+        background-color: rgb(59, 164, 36);
+        color: #fff;
+        cursor: pointer;
+        border: none;
+      }
+      button:nth-child(8):hover {
+        background-color: rgb(2, 121, 30);
+      }
+      .keyboardevent {
+        display: flex;
+        flex-wrap: wrap;
+        width: 80%;
+        height: 200px;
+        border: 2px solid blueviolet;
+        margin: 50px auto;
+        justify-content: center;
+      }
+      .keyboardevent form {
+        margin: 0px;
+      }
+      .keyboardevent h1 {
+        width: 100%;
+        text-align: center;
+        margin: 0px;
+        text-transform: uppercase;
+      }
+      input[type="number"] {
+        width: 300px;
+        height: 30px;
+        border: none;
+        outline: 2.5px double rgb(154, 154, 154);
+      }
+      input[type="number"]:focus {
+        outline: 2.5px double rgb(79, 146, 255);
+      }
+      input[type="button"] {
+        width: 100px;
+        height: 36px;
+        background-color: rgb(79, 146, 255);
+        color: rgb(255, 255, 255);
+        font-size: 14px;
+        border: none;
+        cursor: pointer;
+      }
+      input[type="button"]:hover {
+        background-color: rgb(58, 133, 253);
+      }
+      .windowsevent {
+        display: flex;
+        flex-wrap: wrap;
+        width: 80%;
+        height: 250px;
+        border: 2px solid blueviolet;
+        margin: 50px auto;
+        justify-content: center;
+        box-sizing: border-box;
+      }
+       .windowsevent h1{
+        width: 100%;
+        height: fit-content;
+        text-align: center;
+        margin-bottom: 0px;
+        
+        box-sizing: border-box;
+        text-transform: uppercase;
+      }
+       .windowsevent textarea{
+        box-sizing: border-box;   
+        flex-basis: 600px!important;
+        flex-grow: 100px;
+       }
+    </style>
+    <script>
+      document.write(
+        "<center><h1>Demonstrating Basic Events in javaScript</h1></center><br><br>"
+      );
+    </script>
+  </head>
+  <body onload="events('LOAD')" onunload="events('UNLOAD')"  onresize="events('RESIZE')">
+    <script src="22.JS-Basic-Events-In-JS.js"></script>
+    <div class="mouseevents">
+      <h1>MOUSE EVENTS</h1>
+      <button onclick="events('CLICK')">onclick(CLICK)</button>
+      <button ondblclick="events('DOUBLE CLICK')">
+        ondblclick(DOUBLE CLICK)
+      </button>
+      <button oncontextmenu="events('RIGHT CLICK')">
+        oncontextmenu(RIGHT CLICK)
+      </button>
+      <button onmouseenter="events('MOUSE OVER')">
+        onmouseenter(MOUSE OVER)
+      </button>
+      <button onmouseout="events('MOUSE OUT')">onmouseout(MOUSE OUT)</button>
+      <button onmousedown="events('MOUSE DOWN')">
+        onmousedown(MOUSE DOWN)
+      </button>
+      <button onmouseup="events('MOUSE UP')">onmouseup(MOUSE UP)</button>
+    </div>
+    <div class="keyboardevent">
+      <h1>Keyboard Events</h1>
+      <form
+        action=""
+        onkeypress="events('KEY PRESS')"
+        onkeyup="events('KEY UP')"
+      >
+        <input type="number" class="year" />
+        <input type="button" cls="btn" onclick="verify()" value="Submit" />
+      </form>
+    </div>
+    <div class="windowsevent">
+      <h1>Windows Event</h1>
+      <div class="text">
+      <textarea name="" id=""  onscroll="events('SCROLL')"  >
+Lorem, ipsum dolor sit amet consectetur adipisicing elit. Similique 
+sequi hic nesciunt tenetur dolorem accusamus alias accusantium id veritatis! 
+Itaque aspernatur voluptates consequatur consectetur dolorem exercitationem voluptatem 
+cum esse temporibus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis,
+ sunt iure? Et libero natus necessitatibus minima ducimus doloribus mollitia.
+  Autem, corrupti. Delectus doloremque hic quia labore repudiandae illo est nemo?
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque perspiciatis
+   maiores, consequuntur veniam sit maxime numquam consequatur amet repellat 
+   aspernatur esse eveniet nostrum placeat praesentium doloribus eos dolore
+    incidunt voluptate quaerat temporibus facilis, 
+  ex deleniti. Sequi ducimus veritatis dolorem repudiandae!
+</textarea>
+</div>
+    </div>
+        <section class="navigatebtn">
+      <a href="21.Function-With-Return-Value-In-JS.html" class="previousbtn">Previous </a>
+      <a href="23.JS-While-Loop-In-JS.html" class="nextbtn">Next </a>
+    </section>
+    <style>
+      .nextbtn {
+        width: 120px;
+        height: 40px;
+        color: #fff;
+        text-transform: uppercase;
+        background-color: crimson;
+        text-align: center;
+        padding-top: 10px;
+        font-weight: 800px;
+        font-size: 18px;
+        text-decoration: none;
+
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+      }
+      .nextbtn::after {
+        content: "\25BA";
+      }
+      .previousbtn {
+        width: 120px;
+        height: 40px;
+        color: #fff;
+        text-transform: uppercase;
+        background-color: crimson;
+        text-align: center;
+        padding-top: 10px;
+        font-weight: 800px;
+        font-size: 18px;
+        text-decoration: none;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+      }
+      .previousbtn:hover {
+        background-color: rgb(184, 0, 37);
+      }
+      .nextbtn:hover {
+        background-color: rgb(184, 0, 37);
+      }
+      .previousbtn::before {
+        content: "\25C0";
+        margin-right: 8px;
+      }
+      .navigatebtn {
+        display: flex;
+        width: 98%;
+
+        margin: 40px auto 10px auto;
+        height: fit-content;
+        box-sizing: border-box;
+        padding: 10px;
+        justify-content: space-between;
+      }
+    </style>
+  </body>
+</html>

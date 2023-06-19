@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      * {
+        margin: 0%;
+        padding: 0%;
+        box-sizing: border-box;
+      }
+      a {
+        text-decoration: none;
+        color: black;
+        font-size: 20px;
+      }
+      h3 {
+        text-transform: capitalize;
+        color: rgb(2, 90, 2);
+      }
+      h1 {
+        text-transform: capitalize;
+        color: rgb(2, 90, 2);
+      }
+      body {
+        display: flex;
+        flex-direction: column;
+      }
+      header {
+        margin-top: 3 0px;
+        background-color: greenyellow;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+      }
+      nav ul {
+        display: flex;
+        list-style: none;
+        margin: 10px;
+      }
+      #links ul {
+        display: flex;
+        list-style: none;
+        margin: 20px;
+      }
+      .logo {
+        margin: auto;
+        text-transform: uppercase;
+        color: rgb(2, 90, 2);
+      }
+      #links li {
+        padding: 6px;
+      }
+      nav ul li {
+        padding: 6px;
+      }
+      #main {
+        display: flex;
+        margin: 10px;
+        /* flex-wrap: wrap; */
+      }
+      #main li {
+        padding: 10px;
+      }
+      .service-container {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+      }
+      .service-box {
+        border: 1px solid rgb(206, 206, 206);
+        padding: 20px;
+        margin-top: 20px;
+        max-width: 380px;
+        flex-basis: 32%;
+      }
+      .service-heading {
+        padding: 0px 0px;
+        color: rgb(2, 90, 2);
+      }
+      .service-disc {
+        padding: 10px 0;
+      }
+      .service-box img {
+        height: 240px;
+        width: 100%;
+      }
+      .service-buttoon {
+        padding: 10px;
+      }
+      article .disc {
+        margin: 20px 0px;
+      }
+      aside {
+        flex: 0 0 20vw;
+        background-color: rgb(224, 224, 224);
+        margin: 10px 20px 0px 0px;
+        padding: 10px 10px 0px 10px;
+        justify-content: center;
+        align-items: center;
+      }
+      aside ul li {
+        list-style: none;
+      }
+      aside ul a {
+        color: rgb(0, 0, 0);
+        display: block;
+        padding: 10px;
+        border-bottom: 1px solid rgb(155, 155, 155);
+        text-align: center;
+      }
+      aside img {
+        width: 100%;
+        height: 450px;
+        padding: 20px 0px 0px 0px;
+      }
+      .service-buttoon .btn {
+        padding: 6px;
+        color: rgb(0, 0, 0);
+        border: 1px solid gray;
+        box-shadow: 2px 2px 3px 2px rgb(185, 185, 185);
+        border-radius: 4px;
+        font-size: 18px;
+        width: 100px;
+        text-align: center;
+        cursor: pointer;
+        transition: all 8s;
+      }
+      h3 {
+        margin: 20px 0px 0px 0px;
+        text-transform: capitalize;
+        font-size: 26px;
+      }
+      p {
+        color: gray;
+        font-size: 20px;
+        font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+      }
+      article {
+        margin: 10px 10px 0px 10px;
+      }
+      footer {
+        display: flex;
+        background-color: greenyellow;
+        margin: 0px;
+        margin-bottom: 20px;
+        height: 70px;
+        justify-content: center;
+        align-items: center;
+      }
+      .service-buttoon .btn:hover {
+        background-color: gray;
+        transform: translateZ(-2);
+        opacity: -1;
+      }
+      @media screen and (max-width: 1000px) {
+        aside {
+          flex: 0 0 30vw;
+        }
+        .service-box {
+          flex: 0 0 49%;
+        }
+      }
+      @media screen and (max-width: 800px) {
+        aside {
+          flex: 0 0 40vw;
+        }
+
+        .article {
+          padding: 0px;
+        }
+        .service-box {
+          flex: 0 0 100%;
+          max-width: 580px;
+        }
+      }
+      @media screen and (max-width: 600px) {
+        aside {
+          flex: 0 0 99vw;
+        }
+        #main {
+          flex-wrap: wrap;
+        }
+        .article {
+          padding: 0px;
+        }
+        .service-box {
+          flex: 0 0 100%;
+          max-width: 580px;
+        }
+      }
+      @media screen and (max-width: 500px) {
+        .article {
+          padding: 0px;
+        }
+        aside {
+          flex: 0 0 99vw;
+        }
+        .service-box {
+          flex: 0 0 100%;
+          max-width: 400px;
+        }
+        footer h1 {
+          font-size: 24px;
+        }
+        #main {
+          flex-wrap: wrap;
+        }
+      }
+      @media screen and (max-width: 470px) {
+        .article {
+          padding: 0px;
+        }
+        aside {
+          flex: 0 0 99vw;
+          margin: 0px 10px 0px -8px;
+        }
+        .service-box {
+          flex: 0 0 100%;
+          max-width: 450px;
+        }
+        footer h1 {
+          font-size: 24px;
+          justify-self: center;
+        }
+        #main {
+          flex-wrap: wrap;
+        }
+      }
+
+      h1 {
+        text-align: center;
+        color: gray;
+      }
+      h2 {
+        text-align: center;
+        color: rgb(0, 58, 112);
+        width: 70%;
+        margin: 20px auto;
+      }
+      .box {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 80%;
+        margin: 20px auto;
+        border: 2px solid gray;
+        padding: 20px;
+      }
+      button {
+        flex-basis: 200px;
+        flex-grow: 1;
+        margin: 10px;
+        height: 40px;
+        font-size: 20px;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        color: #fff;
+        background-color: rgb(255, 0, 0);
+        border: 2px solid #fff;
+        cursor: pointer;
+        border-radius: 6px;
+      }
+      button:hover {
+        background-color: rgb(128, 26, 0);
+      }
+      button:nth-child(3n) {
+        background-color: rgb(213, 0, 57);
+      }
+      button:nth-child(3n):hover {
+        background-color: rgb(136, 0, 36);
+      }
+      button:nth-child(5n) {
+        background-color: rgb(213, 0, 199);
+      }
+      button:nth-child(5n):hover {
+        background-color: rgb(179, 0, 182);
+      }
+      button:nth-child(7n) {
+        background-color: rgb(0, 82, 213);
+      }
+      button:nth-child(7n):hover {
+        background-color: rgb(0, 15, 182);
+      }
+      button:nth-child(9n) {
+        background-color: rgb(0, 213, 192);
+      }
+      button:nth-child(9n):hover {
+        background-color: rgb(1, 98, 163);
+      }
+      button:nth-child(13n) {
+        background-color: rgb(0, 213, 138);
+      }
+      button:nth-child(13n):hover {
+        background-color: rgb(2, 110, 63);
+      }
+      button:nth-child(2) {
+        background-color: rgb(2, 0, 47);
+      }
+      button:nth-child(2):hover {
+        background-color: rgb(2, 1, 35);
+      }
+      button:nth-child(4) {
+        background-color: rgb(0, 89, 213);
+      }
+      button:nth-child(4):hover {
+        background-color: rgb(0, 25, 101);
+      }
+      button:nth-child(8n) {
+        background-color: rgb(25, 213, 0);
+      }
+      button:nth-child(8n):hover {
+        background-color: rgb(1, 80, 12);
+      }
+      span {
+        color: red;
+      }
+    </style>
+    <title>43.JS-DOM-querySelector-And-querySelectorAll-In-JS</title>
+  </head>
+  <body id="dd">
+    <script src="43.JS-DOM-querySelector-And-querySelectorAll-In-JS.js"></script>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </nav>
+      <div class="logo">
+        <h1>My Website</h1>
+      </div>
+      <div id="links">
+        <ul>
+          <li>
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+          </li>
+        </ul>
+      </div>
+    </header>
+    <div id="main">
+      <aside class="side">
+        <ul>
+          <li><a href="#">Some Text</a></li>
+          <li><a href="#">Some Text</a></li>
+          <li><a href="#">Some Text</a></li>
+          <li><a href="#">Some Text</a></li>
+          <li><a href="#">Some Text</a></li>
+        </ul>
+        <img src="../imgs/joey-nicotra-aQSPWSxCweY-unsplash (2).jpg" alt="" />
+      </aside>
+
+      <article>
+        <h1>Welcome to My Websire</h1>
+        <p id="content" class="disc" onclick="nothing()" onload="nothing()">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Beatae ad
+          atque accusamus veniam enim! Magnam omnis laudantium ullam animi
+          voluptatum dignissimos nostrum, cupiditate quisquam dolorum. Dolore
+          voluptate, voluptatibus, quas deleniti sequi mollitia modi soluta aut
+          ad illo dolores minus. Tempore maiores odit inventore explicabo
+          eveniet, voluptates exercitationem quia adipisci ratione facilis
+          similique esse nemo consequuntur, veritatis dicta cupiditate
+          blanditiis commodi sapiente. Impedit similique, sit ad quod a nesciunt
+          modi labore consequatur assumenda ratione sint recusandae debitis
+          sapiente atque nobis officia beatae amet magnam suscipit non mollitia
+          dolorum laboriosam asperiores quia.
+        </p>
+        <h3>Our Services</h3>
+        <div class="service-container">
+          <div class="service-box">
+            <div class="service-image">
+              <img src="../imgs/b1.jpg" alt="" />
+            </div>
+            <div class="service-heading">
+              <h1>Service Heading</h1>
+            </div>
+            <div class="service-disc">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem
+                voluptas quia reprehenderit id reiciendis magni earum quaerat
+                aliquam,
+              </p>
+              <div class="service-buttoon">
+                <button class="btn">Vist Here</button>
+              </div>
+            </div>
+          </div>
+          <div class="service-box">
+            <div class="service-image">
+              <img src="../imgs/b2.jpg" alt="" />
+            </div>
+            <div class="service-heading">
+              <h1>Service Heading</h1>
+            </div>
+            <div class="service-disc">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem
+                voluptas quia reprehenderit id reiciendis magni earum quaerat
+                aliquam,
+              </p>
+              <div class="service-buttoon">
+                <button class="btn">Vist Here</button>
+              </div>
+            </div>
+          </div>
+          <div class="service-box">
+            <div class="service-image">
+              <img src="../imgs/b3.jpg" alt="" />
+            </div>
+            <div class="service-heading">
+              <h1>Service Heading</h1>
+            </div>
+            <div class="service-disc">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem
+                voluptas quia reprehenderit id reiciendis magni earum quaerat
+                aliquam,
+              </p>
+              <div class="service-buttoon">
+                <button class="btn">Vist Here</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+    <footer>
+      <h1>Made By Dhanush Wodeyar</h1>
+    </footer>
+
+    <h1>JavaScript DOM querySelector & querySelectorAll </h1>
+    <div class="box">
+      <button onclick="querySelectorChoice()">querySelector</button>
+      <button onclick="querySelectorAllChoice()">querySelectorAll</button>
+    </div>
+    <h2 id="result"></h2>
+    <div class="result1"></div>
+    <article></article>
+        <section class="navigatebtn">
+      <a href="42.JS-DOM-Get-And-Set-Methods-In-JS.html" class="previousbtn">Previous </a>
+      <a href="44.JS-DOM-CSS-Styling-Methods-In-JS.html" class="nextbtn">Next </a>
+    </section>
+    <style>
+      .nextbtn {
+        width: 120px;
+        height: 40px;
+        color: #fff;
+        text-transform: uppercase;
+        background-color: crimson;
+        text-align: center;
+        padding-top: 10px;
+        font-weight: 800px;
+        font-size: 18px;
+        text-decoration: none;
+
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+      }
+      .nextbtn::after {
+        content: "\25BA";
+      }
+      .previousbtn {
+        width: 120px;
+        height: 40px;
+        color: #fff;
+        text-transform: uppercase;
+        background-color: crimson;
+        text-align: center;
+        padding-top: 10px;
+        font-weight: 800px;
+        font-size: 18px;
+        text-decoration: none;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+      }
+      .previousbtn:hover {
+        background-color: rgb(184, 0, 37);
+      }
+      .nextbtn:hover {
+        background-color: rgb(184, 0, 37);
+      }
+      .previousbtn::before {
+        content: "\25C0";
+        margin-right: 8px;
+      }
+      .navigatebtn {
+        display: flex;
+        width: 98%;
+
+        margin: 40px auto 10px auto;
+        height: fit-content;
+        box-sizing: border-box;
+        padding: 10px;
+        justify-content: space-between;
+      }
+    </style>
+  </body>
+</html>

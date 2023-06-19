@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registarion form</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        padding: 0px;
+        margin: 0px;
+      }
+      body {
+        background-repeat: no-repeat;
+        background-size: 100%;
+        height: 600px;
+        /* background: #0c5f98; */
+        background: -webkit-linear-gradient(top, #0c5f98, #830133);
+        background: -moz-linear-gradient(top, #0c5f98, #830133);
+        background: linear-gradient(to bottom, #0c5f98, #830133);
+      }
+      .continer {
+        position: relative;
+        max-width: 400px;
+        height: min-content;
+        margin: 40px auto;
+        padding: 10px;
+
+        background: rgba(255, 255, 255, 0.302);
+        border-radius: 16px;
+        box-shadow: 0 4px 30px rgba(255, 255, 255, 0.458);
+        backdrop-filter: blur(4.5px);
+        -webkit-backdrop-filter: blur(4.5px);
+        border: 1px solid rgba(255, 255, 255, 0.382);
+      }
+      .sign-up-continer {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        position: relative;
+        top: 0px;
+        left: 0px;
+        padding: 10px;
+      }
+      .sign-up-continer .header {
+        display: flex;
+        flex-basis: 70%;
+        text-align: center;
+        margin: 0px auto;
+        color:#ffffffda
+      }
+      .sign-up-continer .header  span{
+       margin-top:-10px;
+        font-size: 50px;
+      }
+      .sign-up-continer .signup-div {
+        display: flex;
+        background-color: rgb(25, 25, 97);
+        color: antiquewhite;
+        font-size: 20px;
+        font-weight: 600;
+        flex-direction: column;
+        margin: 10px;
+        padding: 20px;
+        border-radius: 12px;
+      }
+
+      .sign-up-continer .signup-div form {
+        display: flex;
+        flex-basis: 100%;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      .sign-up-continer .signup-div form :not(input[type="submit"]) {
+        flex-grow: 1;
+        flex-basis: 100%;
+        height: 38px;
+        margin: 8px;
+        border-radius: 6px;
+        border: none;
+        font-size: 15px;
+        caret-color: #0015ff;
+      }
+      .sign-up-continer .signup-div form :not(input[type="submit"]):focus {
+        outline: 2px solid #aab0ff;
+        outline-offset: 1px;
+      }
+      .sign-up-continer .signup-div form input[type="submit"] {
+        flex-basis: 60%;
+        height: 40px;
+        margin: 8px;
+        border-radius: 8px;
+        border: 0.1px solid #ffffff84;
+        font-size: 17px;
+        font-weight: 700;
+        color: #ffffff;
+        background-color: #95003e;
+      }
+      .sign-up-continer .signup-div form input[type="submit"]:hover{
+         background-color: #7a0033;
+      }
+      input::placeholder {
+        text-indent: 6px;
+      }
+
+      .sign-up-continer .signup-div .toggle :not(input:checked) ~ form {
+        display: none;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        padding: 20px;
+      }
+
+      .sign-up-continer .signup-div .toggle input[type="radio"]:checked ~ form {
+        text-align: center;
+        background-color: rgb(25, 25, 97);
+      }
+      .sign-up-continer .signup-div .toggle input[type="radio"]:checked{
+        accent-color: #95003e ;
+      }
+      .toggle {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+      }
+      .sign-up-continer h3 {
+        flex-grow: 1;
+        flex-basis: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="continer">
+      <div class="sign-up-continer">
+        <div class="header">
+          <h1>Sign Up</h1>
+          <span>/</span>
+          <h1>Sign In</h1>
+        </div>
+        <div class="signup-div">
+          <div class="toggle">
+            SIGN - UP
+            <input type="radio" name="check" id="checkid" checked />
+            <form action="">
+              <input
+                class="username"
+                placeholder="Username"
+                name="username"
+                type="text"
+              />
+              <input
+                class="email"
+                placeholder="Email"
+                name="email"
+                type="email"
+              />
+              <input
+                class="password"
+                placeholder="Password"
+                name="password"
+                type="password"
+              />
+              <input
+                class="cpassword"
+                placeholder="Confirm Password"
+                name="cpassword"
+                type="password"
+              />
+              <input
+                class="signupbtn"
+                name="signupbtn"
+                type="submit"
+                value="Sgin-Up"
+              />
+            </form>
+          </div>
+        </div>
+        <div class="signup-div">
+          <div class="toggle">
+            SIGN - IN
+            <input type="radio" name="check" id="checkid" />
+            <form action="">
+              <input
+                class="username"
+                placeholder="Username"
+                name="username"
+                type="text"
+              />
+              <input
+                class="email"
+                placeholder="Email"
+                name="email"
+                type="email"
+              />
+              <input
+                class="password"
+                placeholder="Password"
+                name="password"
+                type="password"
+              />
+              <input
+                class="signupbtn"
+                name="signupbtn"
+                type="submit"
+                value="Sgin-In"
+              />
+            </form>
+            <!-- <h1>Dhanush</h1> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
